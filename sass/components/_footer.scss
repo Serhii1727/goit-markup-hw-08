@@ -1,0 +1,140 @@
+.footer {
+  background-color: $secondary-bc-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-box {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-box {
+  margin-right: 70px;
+}
+
+.address-box__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 0;
+
+  &--color-white {
+    color: $primery-white-color;
+  }
+}
+
+.address {
+  font-style: normal;
+
+  &__item:not(:last-child) {
+    color: $primery-white-color;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.7;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__link:hover,
+  __link:focus {
+    color: $accent-text;
+  }
+}
+.socials-box {
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $primery-white-color;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.link-list__link--background-color_gray {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.link-list__icon--color_white {
+  fill: $primery-white-color;
+}
+
+/* Форма в подвале сайта */
+.form {
+  margin-left: 93px;
+
+  &__text {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $primery-white-color;
+  }
+}
+
+.form-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.form-box__input {
+  color: var(--primery-white-color);
+  width: 358px;
+  height: 50px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 10px;
+  padding-left: 16px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  :focus {
+    outline: none;
+    border: 1px solid #2196f3;
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  margin: 0;
+  border-color: transparent;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: $primery-white-color;
+    margin-right: 10px;
+  }
+}
