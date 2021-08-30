@@ -18,10 +18,17 @@
     <!-- Шапка сайта -->
     <header class="page-header">
         <div class="nav-container container">
+           
+        </button>
             <nav class="navbar">
                 <a href="#" class="logo">
                     <span class="logo__first-part">Web</span><span class="logo__second-part">Studio</span>
                 </a>
+                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="24" height="16">
+                        <use href="./images/"menu_24px.svg"></use>
+                    </svg>
+                </button>
                 <ul class="site-nav">
                     <li class="site-nav__item">
                         <a href="./index.html" class="site-nav__link site-nav__link--current">Студия
@@ -479,7 +486,31 @@
         </div>
     </div>
 
+    <!-- Мобильное меню -->
+    <div class="modile-menu" id="mobile-menu.js">
+        <button class="mobile-menu__button"></button>
+        <ul class="mobile-menu__nav-list">
+            <li class="mobile-menu__nav-item">Студия</li>
+            <li class="mobile-menu__nav-item">Портфолио</li>
+            <li class="mobile-menu__nav-item">Контакты</li>
+        </ul>
+        <ul class="mobile-menu__auth-list">
+            <li class="obile-menu__auth-item">+38 096 111 11 11</li>
+            <li class="obile-menu__auth-item">info@devstudio.com</li>
+        </ul>
+        <ul class="mobile-menu__social-list">
+            <li class="mobile-menu__social-item">Instagram</li>
+            <li class="mobile-menu__social-item">Twitter</li>
+            <li class="mobile-menu__social-item">Facebook</li>
+            <li class="mobile-menu__social-item">LinkedIn</li>
+        </ul>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 
 </html>
