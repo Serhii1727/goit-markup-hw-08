@@ -2,6 +2,10 @@
   display: flex;
   margin: 0;
 
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
   &__item:not(:last-child) {
     margin-right: 50px;
   }

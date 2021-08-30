@@ -2,6 +2,10 @@
   display: flex;
   margin-left: auto;
 
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
   &__item {
     display: flex;
   }
