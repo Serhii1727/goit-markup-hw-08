@@ -12,3 +12,25 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (min-width: $mobile) {
+  .section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  .section__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  .section__title {
+    margin-bottom: 30px;
+  }
+}

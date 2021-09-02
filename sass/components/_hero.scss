@@ -13,11 +13,16 @@
     line-height: 1.4;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    width: 696px;
+    max-width: 696px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      font-size: 26px;
+      line-height: 1.6;
+    }
   }
 }
 
@@ -34,4 +39,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero-box {
+    background: url(../images/imghero2x.jpg);
+  }
 }

@@ -1,19 +1,50 @@
 .features {
-  display: flex;
+  @media screen and (min-width: $mobile) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  // @media screen and (min-width: $desktop) {
+  //   display: flex;
+  // }
+
+  &__item {
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 8 * 15px) / 4);
+      // // margin-right: 15px;
+    }
   }
 
   &__svg-box {
     display: flex;
-    margin-bottom: 30px;
+
     background-color: $bc-before-feature;
     border-radius: 4px;
     justify-content: center;
     align-items: center;
-    width: 270px;
-    height: 120px;
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+      height: 120px;
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
@@ -21,18 +52,26 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
-  }
 
-  &__title {
-    color: $title-text-color;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      text-align: left;
+    }
   }
 
   &__text {
     font-size: 14px;
     line-height: 1.7;
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      text-align: justify;
+    }
+    @media screen and (min-width: desktop) {
+      text-align: left;
+    }
   }
 }
 
@@ -42,4 +81,16 @@
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+@media screen and (min-width: $mobile) and (max-width: 767px) {
+  .features__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .features__item:not(:last-child) {
+    margin-right: 15px;
+  }
 }

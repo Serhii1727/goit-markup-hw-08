@@ -1,12 +1,13 @@
 .menu-container {
-  position: fixed;
+  position: absolute;
+  overflow-y: scroll;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   background-color: $primery-white-color;
-
+  width: 100%;
+  height: 100vh;
   transform: translateX(100%);
+  z-index: 999;
 }
 
 .menu-container.is-open {

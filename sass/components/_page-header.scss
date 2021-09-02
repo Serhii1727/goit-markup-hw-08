@@ -1,5 +1,13 @@
 .page-header {
   border-bottom: 1px solid #ececec;
-  height: 80px;
-  display: flex;
+  // height: 80px;
+  // display: flex;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    height: 80px;
+    display: flex;
+  }
 }
