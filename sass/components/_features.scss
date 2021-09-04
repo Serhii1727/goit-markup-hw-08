@@ -1,16 +1,11 @@
 .features {
-  @media screen and (min-width: $mobile) {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
   }
-  // @media screen and (min-width: $desktop) {
-  //   display: flex;
-  // }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 
   &__item {
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
@@ -18,32 +13,33 @@
       margin: 15px;
     }
     @media screen and (min-width: $desktop) {
-      flex-basis: calc((100% - 8 * 15px) / 4);
-      // // margin-right: 15px;
+      width: 270px;
+      // display: flex;
+      // flex-basis: calc((100% - 8 * 15px) / 4);
+      // // // margin-right: 15px;
     }
   }
 
   &__svg-box {
     display: flex;
-
+    padding-top: 25px;
+    padding-bottom: 25px;
     background-color: $bc-before-feature;
     border-radius: 4px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-      width: 100%;
-      margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
     }
 
     @media screen and (min-width: $tablet) {
-      margin-bottom: 30px;
     }
 
     @media screen and (min-width: $desktop) {
       width: 270px;
       height: 120px;
-      margin-bottom: 30px;
     }
   }
 
@@ -52,24 +48,21 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 10px;
-
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-      text-align: center;
-    }
+    text-align: center;
 
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
-      text-align: left;
+      // text-align: left;
     }
   }
 
   &__text {
+    font-weight: normal;
     font-size: 14px;
     line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $primery-text-color;
 
-    @media screen and (min-width: $mobile) and (max-width: 767px) {
-      text-align: justify;
-    }
-    @media screen and (min-width: desktop) {
+    @media screen and (min-width: $desktop) {
       text-align: left;
     }
   }
@@ -83,7 +76,7 @@
   margin: -1px;
 }
 
-@media screen and (min-width: $mobile) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .features__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -91,6 +84,6 @@
 
 @media screen and (min-width: $desktop) {
   .features__item:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 30px;
   }
 }

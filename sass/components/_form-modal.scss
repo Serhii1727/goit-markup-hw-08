@@ -97,9 +97,19 @@
   }
 
   &__text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    color: $primery-text-color;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.03em;
+    }
+
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+      line-height: 1.71;
+      letter-spacing: 0.03em;
+    }
   }
 
   &__link {
