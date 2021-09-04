@@ -8,6 +8,7 @@
   height: 100vh;
   transform: translateX(100%);
   z-index: 999;
+
   @media screen and (min-width: $desktop) {
     display: none;
   }
